@@ -92,7 +92,7 @@ export default function Home() {
                 <Masonry breakpointCols={2} className="flex gap-4">
                   {images.map((image, index) =>
                     < Image
-                      key={image}
+                      key={index}
                       src={image}
                       alt="#"
                       className="mb-4 hover:opacity-70 cursor-pointer"
