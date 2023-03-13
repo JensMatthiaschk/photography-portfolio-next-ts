@@ -22,13 +22,13 @@ type GalleryProps = {
 export function Gallery({ photos }: GalleryProps) {
 
     const lightboxRef = useRef<LightGallery | null>(null)
+    
     return (
         <>
             <Masonry breakpointCols={2} className="flex gap-4">
                 {photos.map((photo, index) =>
-                    <div className="relative">
+                    <div key={photo.src} className="relative">
                         < Image
-                            key={photo.src}
                             src={photo.src}
                             width={photo.width}
                             height={photo.height}
